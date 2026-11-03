@@ -1,0 +1,14 @@
+# Direct dependencies from the validated Windows Python 3.14 environment.
+# These supplement the two project requirements; transitive packages are still
+# resolved by pip for the recipient's supported Python version and platform.
+PyMuPDF==1.28.2
+python-dotenv==1.2.3
+llama-index-core==0.14.25
+llama-index-llms-deepseek==0.4.1
+llama-index-embeddings-huggingface==0.8.0
+sentence-transformers==6.1.0
+pydantic==2.13.4
+XlsxWriter==3.2.9
+streamlit==1.66.1
+altair==6.2.1
+pandas==3.0.3

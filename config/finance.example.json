@@ -1,0 +1,8 @@
+{
+  "report_set": "../data/reports/report_set.json",
+  "output_dir": "../outputs/agent_runs",
+  "index_dir": null,
+  "parser_profile": null,
+  "top_k": 5,
+  "export_backend": "python"
+}

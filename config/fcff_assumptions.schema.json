@@ -1,0 +1,698 @@
+{
+  "$defs": {
+    "DiscountRate": {
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "enum": [
+            "direct",
+            "components"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "wacc": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Wacc"
+        },
+        "risk_free_rate": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Risk Free Rate"
+        },
+        "beta": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Beta"
+        },
+        "equity_risk_premium": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Equity Risk Premium"
+        },
+        "country_risk_premium": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Country Risk Premium"
+        },
+        "pretax_cost_of_debt": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Pretax Cost Of Debt"
+        },
+        "debt_tax_rate": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Debt Tax Rate"
+        },
+        "market_equity": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Market Equity"
+        },
+        "market_debt": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Market Debt"
+        },
+        "rationale": {
+          "minLength": 1,
+          "pattern": ".*\\S.*",
+          "title": "Rationale",
+          "type": "string"
+        }
+      },
+      "required": [
+        "mode",
+        "rationale"
+      ],
+      "title": "DiscountRate",
+      "type": "object"
+    },
+    "EquityBridge": {
+      "additionalProperties": false,
+      "properties": {
+        "as_of": {
+          "format": "date",
+          "title": "As Of",
+          "type": "string"
+        },
+        "excess_cash": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            }
+          ],
+          "title": "Excess Cash"
+        },
+        "non_operating_assets": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            }
+          ],
+          "title": "Non Operating Assets"
+        },
+        "interest_bearing_debt": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            }
+          ],
+          "title": "Interest Bearing Debt"
+        },
+        "minority_interest": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            }
+          ],
+          "title": "Minority Interest"
+        },
+        "preferred_equity": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            }
+          ],
+          "title": "Preferred Equity"
+        },
+        "other_claims": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            }
+          ],
+          "title": "Other Claims"
+        },
+        "diluted_shares": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            }
+          ],
+          "title": "Diluted Shares"
+        },
+        "market_price": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Market Price"
+        },
+        "rationale": {
+          "minLength": 1,
+          "pattern": ".*\\S.*",
+          "title": "Rationale",
+          "type": "string"
+        }
+      },
+      "required": [
+        "as_of",
+        "excess_cash",
+        "non_operating_assets",
+        "interest_bearing_debt",
+        "minority_interest",
+        "preferred_equity",
+        "other_claims",
+        "diluted_shares",
+        "rationale"
+      ],
+      "title": "EquityBridge",
+      "type": "object"
+    },
+    "ForecastYear": {
+      "additionalProperties": false,
+      "properties": {
+        "year": {
+          "maximum": 2215,
+          "minimum": 1901,
+          "title": "Year",
+          "type": "integer"
+        },
+        "revenue_growth": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": -1.0,
+              "maximum": 3.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            }
+          ],
+          "title": "Revenue Growth"
+        },
+        "ebit_margin": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": -1.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            }
+          ],
+          "title": "Ebit Margin"
+        },
+        "cash_tax_rate": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            }
+          ],
+          "title": "Cash Tax Rate"
+        },
+        "depreciation_to_revenue": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            }
+          ],
+          "title": "Depreciation To Revenue"
+        },
+        "capex_to_revenue": {
+          "anyOf": [
+            {
+              "maximum": 5.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            }
+          ],
+          "title": "Capex To Revenue"
+        },
+        "operating_nwc_to_revenue": {
+          "anyOf": [
+            {
+              "maximum": 2.0,
+              "minimum": -2.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            }
+          ],
+          "title": "Operating Nwc To Revenue"
+        },
+        "rationale": {
+          "minLength": 1,
+          "pattern": ".*\\S.*",
+          "title": "Rationale",
+          "type": "string"
+        }
+      },
+      "required": [
+        "year",
+        "revenue_growth",
+        "ebit_margin",
+        "cash_tax_rate",
+        "depreciation_to_revenue",
+        "capex_to_revenue",
+        "operating_nwc_to_revenue",
+        "rationale"
+      ],
+      "title": "ForecastYear",
+      "type": "object"
+    },
+    "Scenario": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "enum": [
+            "Base",
+            "Bear",
+            "Bull"
+          ],
+          "title": "Name",
+          "type": "string"
+        },
+        "discount_rate": {
+          "$ref": "#/$defs/DiscountRate"
+        },
+        "forecasts": {
+          "items": {
+            "$ref": "#/$defs/ForecastYear"
+          },
+          "maxItems": 15,
+          "minItems": 1,
+          "title": "Forecasts",
+          "type": "array"
+        },
+        "terminal": {
+          "$ref": "#/$defs/TerminalAssumptions"
+        },
+        "sensitivity_wacc": {
+          "items": {
+            "anyOf": [
+              {
+                "exclusiveMinimum": 0.0,
+                "type": "number"
+              },
+              {
+                "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                "type": "string"
+              }
+            ]
+          },
+          "maxItems": 20,
+          "minItems": 1,
+          "title": "Sensitivity Wacc",
+          "type": "array"
+        },
+        "sensitivity_growth": {
+          "items": {
+            "anyOf": [
+              {
+                "maximum": 1.0,
+                "minimum": 0.0,
+                "type": "number"
+              },
+              {
+                "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                "type": "string"
+              }
+            ]
+          },
+          "maxItems": 20,
+          "minItems": 1,
+          "title": "Sensitivity Growth",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "discount_rate",
+        "forecasts",
+        "terminal",
+        "sensitivity_wacc",
+        "sensitivity_growth"
+      ],
+      "title": "Scenario",
+      "type": "object"
+    },
+    "TerminalAssumptions": {
+      "additionalProperties": false,
+      "properties": {
+        "growth": {
+          "anyOf": [
+            {
+              "exclusiveMaximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            }
+          ],
+          "title": "Growth"
+        },
+        "ebit_margin": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0.0,
+              "maximum": 1.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            }
+          ],
+          "title": "Ebit Margin"
+        },
+        "cash_tax_rate": {
+          "anyOf": [
+            {
+              "exclusiveMaximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            }
+          ],
+          "title": "Cash Tax Rate"
+        },
+        "return_on_invested_capital": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0.0,
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            }
+          ],
+          "title": "Return On Invested Capital"
+        },
+        "rationale": {
+          "minLength": 1,
+          "pattern": ".*\\S.*",
+          "title": "Rationale",
+          "type": "string"
+        }
+      },
+      "required": [
+        "growth",
+        "ebit_margin",
+        "cash_tax_rate",
+        "return_on_invested_capital",
+        "rationale"
+      ],
+      "title": "TerminalAssumptions",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "finance-fcff-assumptions-v1",
+      "default": "finance-fcff-assumptions-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "company_id": {
+      "minLength": 1,
+      "pattern": ".*\\S.*",
+      "title": "Company Id",
+      "type": "string"
+    },
+    "dataset_fingerprint": {
+      "minLength": 1,
+      "pattern": ".*\\S.*",
+      "title": "Dataset Fingerprint",
+      "type": "string"
+    },
+    "analysis_fingerprint": {
+      "minLength": 1,
+      "pattern": ".*\\S.*",
+      "title": "Analysis Fingerprint",
+      "type": "string"
+    },
+    "currency": {
+      "pattern": "^[A-Z]{3}$",
+      "title": "Currency",
+      "type": "string"
+    },
+    "unit": {
+      "const": "currency_base_unit",
+      "title": "Unit",
+      "type": "string"
+    },
+    "base_year": {
+      "maximum": 2200,
+      "minimum": 1900,
+      "title": "Base Year",
+      "type": "integer"
+    },
+    "valuation_date": {
+      "format": "date",
+      "title": "Valuation Date",
+      "type": "string"
+    },
+    "initial_operating_nwc": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+          "type": "string"
+        }
+      ],
+      "title": "Initial Operating Nwc"
+    },
+    "initial_operating_nwc_evidence": {
+      "minLength": 1,
+      "pattern": ".*\\S.*",
+      "title": "Initial Operating Nwc Evidence",
+      "type": "string"
+    },
+    "scenarios": {
+      "items": {
+        "$ref": "#/$defs/Scenario"
+      },
+      "maxItems": 3,
+      "minItems": 1,
+      "title": "Scenarios",
+      "type": "array"
+    },
+    "bridge": {
+      "$ref": "#/$defs/EquityBridge"
+    },
+    "confirmed": {
+      "title": "Confirmed",
+      "type": "boolean"
+    },
+    "confirmed_by": {
+      "minLength": 1,
+      "pattern": ".*\\S.*",
+      "title": "Confirmed By",
+      "type": "string"
+    },
+    "rationale": {
+      "minLength": 1,
+      "pattern": ".*\\S.*",
+      "title": "Rationale",
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_id",
+    "dataset_fingerprint",
+    "analysis_fingerprint",
+    "currency",
+    "unit",
+    "base_year",
+    "valuation_date",
+    "initial_operating_nwc",
+    "initial_operating_nwc_evidence",
+    "scenarios",
+    "bridge",
+    "confirmed",
+    "confirmed_by",
+    "rationale"
+  ],
+  "title": "ValuationRequest",
+  "type": "object"
+}

@@ -1,0 +1,266 @@
+{
+  "$defs": {
+    "PageLayout": {
+      "additionalProperties": false,
+      "properties": {
+        "file_name": {
+          "title": "File Name",
+          "type": "string"
+        },
+        "file_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "File Hash",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "BS",
+            "IS",
+            "CF"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "pdf_page": {
+          "minimum": 1,
+          "title": "Pdf Page",
+          "type": "integer"
+        },
+        "header_top": {
+          "minimum": 0,
+          "title": "Header Top",
+          "type": "number"
+        },
+        "body_top": {
+          "exclusiveMinimum": 0,
+          "title": "Body Top",
+          "type": "number"
+        },
+        "body_bottom": {
+          "exclusiveMinimum": 0,
+          "title": "Body Bottom",
+          "type": "number"
+        },
+        "label_right": {
+          "exclusiveMinimum": 0,
+          "title": "Label Right",
+          "type": "number"
+        },
+        "value_bands": {
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "maxItems": 8,
+          "minItems": 2,
+          "title": "Value Bands",
+          "type": "array"
+        },
+        "note_band": {
+          "anyOf": [
+            {
+              "maxItems": 2,
+              "minItems": 2,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note Band"
+        }
+      },
+      "required": [
+        "file_name",
+        "file_hash",
+        "kind",
+        "pdf_page",
+        "header_top",
+        "body_top",
+        "body_bottom",
+        "label_right",
+        "value_bands"
+      ],
+      "title": "PageLayout",
+      "type": "object"
+    },
+    "ReportCurrency": {
+      "additionalProperties": false,
+      "description": "User-supplied presentation currency, bound to one uploaded PDF.",
+      "properties": {
+        "file_name": {
+          "title": "File Name",
+          "type": "string"
+        },
+        "file_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "File Hash",
+          "type": "string"
+        },
+        "report_year": {
+          "title": "Report Year",
+          "type": "integer"
+        },
+        "currency": {
+          "enum": [
+            "CNY",
+            "USD",
+            "HKD",
+            "EUR",
+            "GBP",
+            "JPY",
+            "AUD",
+            "CAD",
+            "CHF",
+            "SGD",
+            "NZD",
+            "KRW",
+            "INR",
+            "TWD",
+            "MOP",
+            "MYR",
+            "IDR",
+            "THB",
+            "VND",
+            "PHP",
+            "AED",
+            "SAR",
+            "ZAR",
+            "BRL",
+            "MXN",
+            "RUB",
+            "SEK",
+            "NOK",
+            "DKK",
+            "PLN",
+            "TRY",
+            "ILS"
+          ],
+          "title": "Currency",
+          "type": "string"
+        },
+        "confirmed_by": {
+          "minLength": 1,
+          "pattern": ".*\\S.*",
+          "title": "Confirmed By",
+          "type": "string"
+        }
+      },
+      "required": [
+        "file_name",
+        "file_hash",
+        "report_year",
+        "currency",
+        "confirmed_by"
+      ],
+      "title": "ReportCurrency",
+      "type": "object"
+    },
+    "StatementSelection": {
+      "additionalProperties": false,
+      "properties": {
+        "file_name": {
+          "title": "File Name",
+          "type": "string"
+        },
+        "file_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "File Hash",
+          "type": "string"
+        },
+        "report_year": {
+          "title": "Report Year",
+          "type": "integer"
+        },
+        "kind": {
+          "enum": [
+            "BS",
+            "IS",
+            "CF"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "pdf_pages": {
+          "items": {
+            "type": "integer"
+          },
+          "minItems": 1,
+          "title": "Pdf Pages",
+          "type": "array"
+        }
+      },
+      "required": [
+        "file_name",
+        "file_hash",
+        "report_year",
+        "kind",
+        "pdf_pages"
+      ],
+      "title": "StatementSelection",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "metric_aliases": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Metric Aliases",
+      "type": "object"
+    },
+    "outflow_signs": {
+      "additionalProperties": {
+        "enum": [
+          "positive",
+          "negative"
+        ],
+        "type": "string"
+      },
+      "title": "Outflow Signs",
+      "type": "object"
+    },
+    "statements": {
+      "items": {
+        "$ref": "#/$defs/StatementSelection"
+      },
+      "title": "Statements",
+      "type": "array"
+    },
+    "pages": {
+      "items": {
+        "$ref": "#/$defs/PageLayout"
+      },
+      "title": "Pages",
+      "type": "array"
+    },
+    "report_currencies": {
+      "items": {
+        "$ref": "#/$defs/ReportCurrency"
+      },
+      "title": "Report Currencies",
+      "type": "array"
+    }
+  },
+  "title": "ExtractionProfile",
+  "type": "object"
+}

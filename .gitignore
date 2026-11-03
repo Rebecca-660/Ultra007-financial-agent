@@ -1,0 +1,26 @@
+.venv/
+.env
+__pycache__/
+*.py[cod]
+data/reports/*.pdf
+data/index/
+data/rag_indexes/
+data/models/
+data/review/inspection.json
+data/review/parse_warnings.csv
+data/review/evaluation_run.json
+data/review/download_manifest.json
+node_modules/
+outputs/
+tmp/
+
+# Local and generated artifacts
+.env.*
+!.env.example
+.cache/
+*.log
+*.zip
+*.sha256.txt
+PACKAGE_MANIFEST.json
+data/validation/
+04_本机启动.bat

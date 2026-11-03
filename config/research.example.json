@@ -1,0 +1,31 @@
+{
+  "schema_version": "finance-research-input-v1",
+  "confirmed_by": "",
+  "companies": [
+    {
+      "company_id": "company_a",
+      "name": "公司 A",
+      "industry": "请填写行业",
+      "business_type": "non_financial",
+      "accounting_standard": "请填写已核实的会计准则",
+      "fiscal_year_end": "12-31",
+      "comparability_confirmed": false,
+      "parser_profile": null
+    },
+    {
+      "company_id": "company_b",
+      "name": "公司 B",
+      "industry": "请填写行业",
+      "business_type": "non_financial",
+      "accounting_standard": "请填写已核实的会计准则",
+      "fiscal_year_end": "12-31",
+      "comparability_confirmed": false,
+      "parser_profile": null
+    }
+  ],
+  "reports": [
+    {"company_id": "company_a", "report_year": 2023, "file_name": "../data/reports/公司A_2023.pdf"},
+    {"company_id": "company_a", "report_year": 2024, "file_name": "../data/reports/公司A_2024.pdf"},
+    {"company_id": "company_b", "report_year": 2024, "file_name": "../data/reports/公司B_2024.pdf"}
+  ]
+}

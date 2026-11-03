@@ -1,0 +1,20 @@
+# Key runtime versions verified in the source environment.
+PyMuPDF==1.28.2
+python-dotenv==1.2.3
+llama-index-core==0.14.25
+llama-index-llms-deepseek==0.4.1
+llama-index-embeddings-huggingface==0.8.0
+sentence-transformers==6.1.0
+pydantic==2.13.4
+XlsxWriter==3.2.9
+streamlit==1.66.1
+altair==6.2.1
+pandas==3.0.3
+torch==2.12.0
+transformers==5.17.0
+huggingface-hub==1.19.0
+numpy==2.4.6
+scipy==1.17.1
+scikit-learn==1.9.0
+tokenizers==0.23.1
+safetensors==0.8.0

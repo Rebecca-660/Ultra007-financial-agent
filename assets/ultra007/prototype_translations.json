@@ -1,0 +1,626 @@
+{
+  "workspace": [
+    "财务分析工作台",
+    "Financial workspace",
+    "Финансовый кабинет"
+  ],
+  "flow": [
+    "分析流程",
+    "WORKFLOW",
+    "ЭТАПЫ РАБОТЫ"
+  ],
+  "upload": [
+    "上传年报",
+    "Upload reports",
+    "Загрузить отчёты"
+  ],
+  "dashboard": [
+    "财务概览",
+    "Financial overview",
+    "Финансовый обзор"
+  ],
+  "valuation": [
+    "估值工作台",
+    "Valuation studio",
+    "Оценка стоимости"
+  ],
+  "summary": [
+    "本次摘要",
+    "Session summary",
+    "Итоги сессии"
+  ],
+  "manager": [
+    "财务经理",
+    "Financial manager",
+    "Финансовый менеджер"
+  ],
+  "local": [
+    "本地交互原型",
+    "Local interactive prototype",
+    "Локальный прототип"
+  ],
+  "proto": [
+    "交互草图 · 演示模式",
+    "DESIGN PROTOTYPE · DEMO",
+    "ПРОТОТИП · ДЕМО"
+  ],
+  "privacytitle": [
+    "由数据出发，由你决策",
+    "Data informs. You decide.",
+    "Данные для ваших решений."
+  ],
+  "privacy": [
+    "上传年报，快速洞察经营表现与企业价值。",
+    "Upload reports. Explore performance and value.",
+    "Загрузите отчёты. Изучите результаты и стоимость."
+  ],
+  "welcome": [
+    "欢迎使用 Ultra 007",
+    "Welcome to Ultra 007",
+    "Добро пожаловать в Ultra 007"
+  ],
+  "tagline": [
+    "让财报成为判断的起点。",
+    "From annual reports to informed decisions.",
+    "От отчётности к обоснованным решениям."
+  ],
+  "intro": [
+    "上传公司的年度报告，梳理经营表现，再用你的专业判断探索企业价值。",
+    "Upload company annual reports, understand performance, and explore value with your own assumptions.",
+    "Загрузите годовые отчёты, изучите результаты и оцените бизнес на основе своих допущений."
+  ],
+  "annual": [
+    "请上传公司的年度报告",
+    "Upload company annual reports",
+    "Загрузите годовые отчёты компании"
+  ],
+  "support": [
+    "支持多年度",
+    "Multiple years supported",
+    "За несколько лет"
+  ],
+  "drop": [
+    "将年报拖拽到这里",
+    "Drag annual reports here",
+    "Перетащите отчёты сюда"
+  ],
+  "or": [
+    "或点击下方按钮选择文件",
+    "or choose files from your device",
+    "или выберите файлы на устройстве"
+  ],
+  "browse": [
+    "选择文件",
+    "Browse files",
+    "Выбрать файлы"
+  ],
+  "filehint": [
+    "PDF · 最多 4 份 · 每份不超过 30 MB",
+    "PDF · Up to 4 files · 30 MB per file",
+    "PDF · До 4 файлов · Не более 30 МБ каждый"
+  ],
+  "localonly": [
+    "此草图不会向外部服务传送文件",
+    "This prototype sends no files to external services",
+    "Прототип не передаёт файлы внешним сервисам"
+  ],
+  "usedemo": [
+    "使用演示年报",
+    "Try a sample report",
+    "Открыть демоотчёт"
+  ],
+  "previewTitle": [
+    "把复杂财报，变成清晰的下一步。",
+    "Clarity for your next financial decision.",
+    "Ясность для следующего финансового решения."
+  ],
+  "previewTag": [
+    "YOUR NEXT CLEAR MOVE"
+  ],
+  "sampleart": [
+    "示意图 · 非真实公司数据",
+    "Illustration · Fictional data",
+    "Иллюстрация · Вымышленные данные"
+  ],
+  "f1": [
+    "读懂经营表现",
+    "Understand performance",
+    "Изучите результаты"
+  ],
+  "f1desc": [
+    "收入、盈利、现金流与财务结构，一屏掌握。",
+    "Revenue, earnings, cash flows and structure at a glance.",
+    "Выручка, прибыль, денежные потоки и структура."
+  ],
+  "f2": [
+    "原文来源一目了然",
+    "Sources at a glance",
+    "Источники под рукой"
+  ],
+  "f2desc": [
+    "分析直接呈现，原文出处随时查看。",
+    "Get the analysis directly, with sources available on demand.",
+    "Сразу получите анализ и при желании откройте источники."
+  ],
+  "f3": [
+    "把经验转化为假设",
+    "Bring your expertise",
+    "Примените свой опыт"
+  ],
+  "f3desc": [
+    "填写估值参数，同时查看公式与计算过程。",
+    "Set assumptions and inspect the valuation formula.",
+    "Задайте допущения и изучите формулы оценки."
+  ],
+  "startnote": [
+    "从一份年报开始，建立可解释的财务判断。",
+    "Start with a report. Build an explainable view.",
+    "Начните с отчёта. Сформируйте обоснованный взгляд."
+  ],
+  "footer": [
+    "Ultra 007 · 让投资分析更高效",
+    "Ultra 007 · Smarter investment analysis",
+    "Ultra 007 · Эффективный инвестиционный анализ"
+  ],
+  "footright": [
+    "界面设计 v1.1 / 2026",
+    "Interface design v1.1 / 2026",
+    "Дизайн интерфейса v1.1 / 2026"
+  ],
+  "demowarn": [
+    "当前为虚构示例公司。图表、页码和数值仅用于展示界面；尚未接入年报分析引擎。",
+    "Fictional company. Charts, page references and values demonstrate the design; the report engine is not connected.",
+    "Вымышленная компания. Графики, страницы и значения служат для демонстрации. Анализ отчётов ещё не подключён."
+  ],
+  "company": [
+    "示例制造公司",
+    "Demo Manufacturing",
+    "Демо Производство"
+  ],
+  "examplecompany": [
+    "示例公司",
+    "Fictional company",
+    "Демо-компания"
+  ],
+  "scope": [
+    "2022–2025 · 合并口径 · CNY 百万元",
+    "2022–2025 · Consolidated · CNY million",
+    "2022–2025 · Консолидированная · млн CNY"
+  ],
+  "overviewTitle": [
+    "经营全貌，清晰可见。",
+    "The financial picture, in focus.",
+    "Финансовая картина в фокусе."
+  ],
+  "revenue": [
+    "营业收入",
+    "Revenue",
+    "Выручка"
+  ],
+  "profit": [
+    "净利润",
+    "Net income",
+    "Чистая прибыль"
+  ],
+  "cfo": [
+    "经营活动现金流净额",
+    "Operating cash flow",
+    "Операционный денежный поток"
+  ],
+  "ratio": [
+    "资产负债率",
+    "Liabilities / assets",
+    "Обязательства / активы"
+  ],
+  "vs": [
+    "较上年",
+    "vs prior year",
+    "к прошлому году"
+  ],
+  "unit": [
+    "百万元",
+    "million",
+    "млн"
+  ],
+  "trend": [
+    "收入与盈利趋势",
+    "Revenue & earnings",
+    "Выручка и прибыль"
+  ],
+  "cashtrend": [
+    "现金流表现",
+    "Cash flow performance",
+    "Денежные потоки"
+  ],
+  "all": [
+    "2022–2025"
+  ],
+  "source": [
+    "数据与来源",
+    "Data & sources",
+    "Данные и источники"
+  ],
+  "sourcelink": [
+    "查看示例来源",
+    "View sample sources",
+    "Демо-источники"
+  ],
+  "income": [
+    "合并利润表",
+    "Income statement",
+    "Отчёт о прибыли"
+  ],
+  "balance": [
+    "合并资产负债表",
+    "Balance sheet",
+    "Баланс"
+  ],
+  "cashstmt": [
+    "合并现金流量表",
+    "Cash flow statement",
+    "Отчёт о денежных потоках"
+  ],
+  "page": [
+    "示例页",
+    "Demo page",
+    "Демо-стр."
+  ],
+  "checked": [
+    "示例已提取",
+    "Extracted in demo",
+    "Извлечено в демо"
+  ],
+  "insight": [
+    "示例观察：收入和现金流同步增长；可进一步关注增长来源与现金转化情况。",
+    "Demo insight: revenue and cash flow rise together. Explore growth drivers and cash conversion.",
+    "Демо: выручка и денежный поток растут. Изучите источники роста и конверсию в денежные средства."
+  ],
+  "nextTitle": [
+    "把分析推进一步。",
+    "Take the next step.",
+    "Перейдите к следующему шагу."
+  ],
+  "nextDesc": [
+    "提供你的现金流与折现率假设，探索 DCF 估值。",
+    "Bring your cash flow and discount rate assumptions to a DCF valuation.",
+    "Задайте денежные потоки и ставку дисконтирования для оценки DCF."
+  ],
+  "continue": [
+    "填写参数，计算 DCF",
+    "Set assumptions & value",
+    "Задать параметры DCF"
+  ],
+  "finishonly": [
+    "本次只看分析",
+    "Finish with analysis",
+    "Завершить после анализа"
+  ],
+  "export": [
+    "导出本次摘要",
+    "Export summary",
+    "Скачать итоги"
+  ],
+  "metric": [
+    "关键指标",
+    "Metric",
+    "Показатель"
+  ],
+  "value": [
+    "2025 数值",
+    "2025 value",
+    "Значение за 2025"
+  ],
+  "origin": [
+    "原文定位（示例）",
+    "Source (illustrative)",
+    "Источник (пример)"
+  ],
+  "showAnalysis": [
+    "查看分析",
+    "View analysis",
+    "Открыть анализ"
+  ],
+  "realfile": [
+    "已选择文件：",
+    "Selected files: ",
+    "Выбранные файлы: "
+  ],
+  "realnote": [
+    "文件仅用于演示上传操作。接下来显示的仍为虚构数据，不会读取或分析这份文件。",
+    "Files demonstrate upload only. The next screen uses fictional data; these files are not read or analysed.",
+    "Файлы демонстрируют загрузку. Следующий экран использует вымышленные данные; файлы не анализируются."
+  ],
+  "sampleload": [
+    "正在加载演示工作区",
+    "Loading the demo workspace",
+    "Загрузка демонстрации"
+  ],
+  "loadnote": [
+    "正在模拟上传 → 分析 → 生成图表的界面流程",
+    "Simulating upload → analysis → charts",
+    "Демонстрация: загрузка → анализ → графики"
+  ],
+  "back": [
+    "返回财务概览",
+    "Back to overview",
+    "Назад к обзору"
+  ],
+  "dcftitle": [
+    "你的假设，透明的估值。",
+    "Your assumptions. A clear valuation.",
+    "Ваши допущения. Понятная оценка."
+  ],
+  "dcfsub": [
+    "基于企业自由现金流（FCFF）的两阶段 DCF · 所有输入均为演示假设",
+    "Two-stage FCFF discounted cash flow · All inputs are demo assumptions",
+    "Двухстадийная модель DCF по FCFF · Все данные — демодопущения"
+  ],
+  "assumptions": [
+    "估值假设",
+    "Valuation assumptions",
+    "Допущения оценки"
+  ],
+  "manual": [
+    "财务经理填写",
+    "Manager input",
+    "Ввод менеджера"
+  ],
+  "basefcff": [
+    "基期 FCFF",
+    "Base-year FCFF",
+    "Базовый FCFF"
+  ],
+  "growth": [
+    "预测期增长率",
+    "Forecast growth rate",
+    "Рост в прогнозе"
+  ],
+  "wacc": [
+    "折现率 WACC",
+    "Discount rate / WACC",
+    "Ставка / WACC"
+  ],
+  "terminal": [
+    "永续增长率 g",
+    "Terminal growth rate",
+    "Терминальный рост g"
+  ],
+  "years": [
+    "预测年数",
+    "Forecast years",
+    "Лет прогноза"
+  ],
+  "netdebt": [
+    "净债务",
+    "Net debt",
+    "Чистый долг"
+  ],
+  "shares": [
+    "流通股数",
+    "Shares outstanding",
+    "Акции в обращении"
+  ],
+  "basehint": [
+    "2025 年末 · CNY 百万元",
+    "End of 2025 · CNY million",
+    "На конец 2025 · млн CNY"
+  ],
+  "debthint": [
+    "有息债务 − 现金，可为负值",
+    "Interest-bearing debt − cash; can be negative",
+    "Процентный долг − деньги; может быть < 0"
+  ],
+  "sharehint": [
+    "百万股 · 用于计算每股价值",
+    "Million shares · for per-share value",
+    "Млн акций · для стоимости на акцию"
+  ],
+  "method": [
+    "计算方法 · 可解释 DCF",
+    "METHOD · EXPLAINABLE DCF",
+    "МЕТОД · ПРОЗРАЧНАЯ ОЦЕНКА"
+  ],
+  "methodtitle": [
+    "把未来现金流折算到今天。",
+    "Bring future cash flows to today.",
+    "Приведите будущие потоки к сегодня."
+  ],
+  "ev": [
+    "经营资产价值 EV",
+    "Operating enterprise value",
+    "Стоимость операций EV"
+  ],
+  "fcffdesc": [
+    "第 t 年企业自由现金流",
+    "Free cash flow to firm in year t",
+    "Свободный поток фирме в год t"
+  ],
+  "waccdesc": [
+    "加权平均资本成本",
+    "Weighted average cost of capital",
+    "Средневзвешенная стоимость капитала"
+  ],
+  "tvdesc": [
+    "预测期末的终值",
+    "Value at the end of forecast",
+    "Стоимость в конце прогноза"
+  ],
+  "gdesc": [
+    "稳定期永续增长率",
+    "Perpetual growth in stable stage",
+    "Вечный рост в стабильной стадии"
+  ],
+  "waccnote": [
+    "WACC 由权益成本和税后债务成本加权得到。经验判断的借款利率可作为债务成本输入。",
+    "WACC weights cost of equity and after-tax cost of debt. A borrowing rate can inform the debt cost.",
+    "WACC учитывает стоимость капитала и долга после налогов. Ставка займа может задавать стоимость долга."
+  ],
+  "fcffnote": [
+    "FCFF = EBIT × (1 − T) + D&A − CapEx − ΔNWC；本草图由你直接填写基期 FCFF。",
+    "FCFF = EBIT × (1 − T) + D&A − CapEx − ΔNWC. Enter base FCFF directly in this prototype.",
+    "FCFF = EBIT × (1 − T) + D&A − CapEx − ΔNWC. Введите базовый FCFF вручную."
+  ],
+  "confirmassume": [
+    "我确认本次假设，并了解结果会随参数变化。",
+    "I confirm these assumptions and understand that results depend on them.",
+    "Подтверждаю допущения и понимаю зависимость результата от параметров."
+  ],
+  "calculate": [
+    "计算企业价值",
+    "Calculate value",
+    "Рассчитать стоимость"
+  ],
+  "invalid": [
+    "请检查输入：FCFF 和股数须大于 0；WACC 须大于永续增长率；预测年数须为 1–10 的整数。",
+    "Check inputs: FCFF and shares must be positive, WACC must exceed terminal growth, and forecast years must be an integer from 1 to 10.",
+    "Проверьте данные: FCFF и акции > 0, WACC > терминального роста, прогноз — целое число от 1 до 10."
+  ],
+  "equity": [
+    "股权价值",
+    "Equity value",
+    "Стоимость капитала"
+  ],
+  "perShare": [
+    "每股价值",
+    "Value per share",
+    "Стоимость на акцию"
+  ],
+  "cnyshare": [
+    "CNY / 股",
+    "CNY / share",
+    "CNY / акцию"
+  ],
+  "resultnote": [
+    "演示计算 · 年末折现 · 股权价值 = EV − 净债务",
+    "Demo calculation · Year-end discounting · Equity = EV − net debt",
+    "Деморасчёт · Дисконтирование на конец года · Капитал = EV − чистый долг"
+  ],
+  "forecast": [
+    "预测现金流与现值",
+    "Forecast cash flows & PV",
+    "Прогноз потоков и приведённая стоимость"
+  ],
+  "year": [
+    "年度",
+    "Year",
+    "Год"
+  ],
+  "pv": [
+    "折现后现值",
+    "Present value",
+    "Приведённая стоимость"
+  ],
+  "pvterminal": [
+    "终值现值",
+    "PV of terminal value",
+    "Приведённая терминальная стоимость"
+  ],
+  "sensitivity": [
+    "敏感性分析 · 企业价值 EV",
+    "Sensitivity · Enterprise value",
+    "Чувствительность · EV"
+  ],
+  "sensitivitynote": [
+    "行：WACC ±1 个百分点；列：g ±0.5 个百分点",
+    "Rows: WACC ±1 pp; columns: g ±0.5 pp",
+    "Строки: WACC ±1 п.п.; столбцы: g ±0,5 п.п."
+  ],
+  "finish": [
+    "完成本次分析",
+    "Finish this session",
+    "Завершить сессию"
+  ],
+  "thankyou": [
+    "谢谢使用 Ultra 007。",
+    "Thank you for using Ultra 007.",
+    "Спасибо, что выбрали Ultra 007."
+  ],
+  "thanksbody": [
+    "让每一次财务判断，都更有依据。你可以导出本次摘要，或开始一家新公司的分析。",
+    "Make every financial decision better informed. Export this session or start with another company.",
+    "Пусть каждое решение будет обоснованным. Скачайте итоги или начните анализ другой компании."
+  ],
+  "doneanalysis": [
+    "已完成 · 财务概览",
+    "Completed · Financial overview",
+    "Выполнено · Финансовый обзор"
+  ],
+  "donevaluation": [
+    "已完成 · 财务概览 + DCF",
+    "Completed · Overview + DCF",
+    "Выполнено · Обзор + DCF"
+  ],
+  "notvalued": [
+    "本次未进行估值",
+    "Valuation skipped this session",
+    "Оценка в этой сессии не выполнялась"
+  ],
+  "new": [
+    "分析另一家公司",
+    "Analyse another company",
+    "Анализ другой компании"
+  ],
+  "return": [
+    "返回查看结果",
+    "Return to results",
+    "Вернуться к результатам"
+  ],
+  "session": [
+    "本次分析",
+    "This session",
+    "Эта сессия"
+  ],
+  "sourceDialog": [
+    "原文来源 · 示意",
+    "Source reference · Illustration",
+    "Источник · Пример"
+  ],
+  "sourceDialogBody": [
+    "点击指标可查看对应年报的原文、页码和数据口径。本草图的页码与表格均为界面示例。",
+    "View the report excerpt, page reference and reporting scope for a metric. Page references and tables here are illustrative.",
+    "Откройте фрагмент отчёта, страницу и параметры показателя. Страницы и таблицы здесь условные."
+  ],
+  "close": [
+    "关闭",
+    "Close",
+    "Закрыть"
+  ],
+  "loaded": [
+    "已加载演示工作区",
+    "Demo workspace loaded",
+    "Демонстрация загружена"
+  ],
+  "exported": [
+    "已导出摘要（含假设与演示标记）",
+    "Summary exported with assumptions and demo label",
+    "Итоги скачаны с допущениями и отметкой демо"
+  ],
+  "fileerror": [
+    "请选择 1–4 份 PDF，每份不超过 30 MB。",
+    "Select 1–4 PDF files, each up to 30 MB.",
+    "Выберите 1–4 PDF, не более 30 МБ каждый."
+  ],
+  "empty": [
+    "请先上传年报或使用演示年报。",
+    "Upload reports or try the demo first.",
+    "Сначала загрузите отчёты или откройте демо."
+  ],
+  "currency": [
+    "CNY 百万元",
+    "CNY million",
+    "млн CNY"
+  ],
+  "costformula": [
+    "WACC = Ke × E/(D+E) + Kd × (1−T) × D/(D+E)"
+  ],
+  "validity": [
+    "所有结果均来自本次填写的假设；未使用真实年报数值。",
+    "All results come from the entered assumptions; no real report figures are used.",
+    "Результаты основаны на заданных допущениях; реальные данные отчётов не используются."
+  ],
+  "resetnote": [
+    "演示会话保存在当前页面内；刷新页面会重置。",
+    "The demo session is held on this page; refreshing resets it.",
+    "Демосессия хранится на этой странице; обновление её сбрасывает."
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "$defs": {
+    "Correction": {
+      "additionalProperties": false,
+      "properties": {
+        "row_id": {
+          "title": "Row Id",
+          "type": "string"
+        },
+        "column_id": {
+          "title": "Column Id",
+          "type": "string"
+        },
+        "original": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Original"
+        },
+        "corrected": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Corrected"
+        },
+        "reason": {
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "row_id",
+        "column_id",
+        "original",
+        "corrected",
+        "reason"
+      ],
+      "title": "Correction",
+      "type": "object"
+    },
+    "Decision": {
+      "additionalProperties": false,
+      "properties": {
+        "statement_id": {
+          "title": "Statement Id",
+          "type": "string"
+        },
+        "statement_digest": {
+          "title": "Statement Digest",
+          "type": "string"
+        },
+        "decision": {
+          "enum": [
+            "approved",
+            "rejected"
+          ],
+          "title": "Decision",
+          "type": "string"
+        },
+        "reviewer": {
+          "minLength": 1,
+          "title": "Reviewer",
+          "type": "string"
+        },
+        "reviewed_at": {
+          "title": "Reviewed At",
+          "type": "string"
+        },
+        "note": {
+          "default": "",
+          "title": "Note",
+          "type": "string"
+        },
+        "conflict_resolution": {
+          "default": "",
+          "enum": [
+            "",
+            "as_reported"
+          ],
+          "title": "Conflict Resolution",
+          "type": "string"
+        },
+        "corrections": {
+          "items": {
+            "$ref": "#/$defs/Correction"
+          },
+          "title": "Corrections",
+          "type": "array"
+        }
+      },
+      "required": [
+        "statement_id",
+        "statement_digest",
+        "decision",
+        "reviewer"
+      ],
+      "title": "Decision",
+      "type": "object"
+    },
+    "Review": {
+      "additionalProperties": false,
+      "properties": {
+        "dataset_fingerprint": {
+          "title": "Dataset Fingerprint",
+          "type": "string"
+        },
+        "report_set_id": {
+          "title": "Report Set Id",
+          "type": "string"
+        },
+        "decisions": {
+          "items": {
+            "$ref": "#/$defs/Decision"
+          },
+          "title": "Decisions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "dataset_fingerprint",
+        "report_set_id",
+        "decisions"
+      ],
+      "title": "Review",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "The attestation is submitted by the human caller, never by an Agent.",
+  "properties": {
+    "schema_version": {
+      "const": "finance-human-review-v1",
+      "default": "finance-human-review-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "confirmed_by": {
+      "minLength": 1,
+      "pattern": ".*\\S.*",
+      "title": "Confirmed By",
+      "type": "string"
+    },
+    "source_checked": {
+      "title": "Source Checked",
+      "type": "boolean"
+    },
+    "statement": {
+      "minLength": 1,
+      "pattern": ".*\\S.*",
+      "title": "Statement",
+      "type": "string"
+    },
+    "review": {
+      "$ref": "#/$defs/Review"
+    }
+  },
+  "required": [
+    "confirmed_by",
+    "source_checked",
+    "statement",
+    "review"
+  ],
+  "title": "HumanReview",
+  "type": "object"
+}

@@ -1,0 +1,202 @@
+{
+  "$defs": {
+    "Company": {
+      "additionalProperties": false,
+      "properties": {
+        "company_id": {
+          "minLength": 1,
+          "pattern": ".*\\S.*",
+          "title": "Company Id",
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "pattern": ".*\\S.*",
+          "title": "Name",
+          "type": "string"
+        },
+        "industry": {
+          "minLength": 1,
+          "pattern": ".*\\S.*",
+          "title": "Industry",
+          "type": "string"
+        },
+        "business_type": {
+          "enum": [
+            "non_financial",
+            "financial"
+          ],
+          "title": "Business Type",
+          "type": "string"
+        },
+        "accounting_standard": {
+          "minLength": 1,
+          "pattern": ".*\\S.*",
+          "title": "Accounting Standard",
+          "type": "string"
+        },
+        "fiscal_year_end": {
+          "pattern": "^\\d{2}-\\d{2}$",
+          "title": "Fiscal Year End",
+          "type": "string"
+        },
+        "comparability_confirmed": {
+          "title": "Comparability Confirmed",
+          "type": "boolean"
+        },
+        "parser_profile": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parser Profile"
+        },
+        "display_names": {
+          "additionalProperties": {
+            "minLength": 1,
+            "pattern": ".*\\S.*",
+            "type": "string"
+          },
+          "propertyNames": {
+            "enum": [
+              "EN",
+              "RU"
+            ]
+          },
+          "title": "Display Names",
+          "type": "object"
+        }
+      },
+      "required": [
+        "company_id",
+        "name",
+        "industry",
+        "business_type",
+        "accounting_standard",
+        "fiscal_year_end",
+        "comparability_confirmed"
+      ],
+      "title": "Company",
+      "type": "object"
+    },
+    "ReportInput": {
+      "additionalProperties": false,
+      "properties": {
+        "company_id": {
+          "minLength": 1,
+          "pattern": ".*\\S.*",
+          "title": "Company Id",
+          "type": "string"
+        },
+        "report_year": {
+          "maximum": 2200,
+          "minimum": 1900,
+          "title": "Report Year",
+          "type": "integer"
+        },
+        "file_name": {
+          "minLength": 1,
+          "pattern": ".*\\S.*",
+          "title": "File Name",
+          "type": "string"
+        },
+        "reporting_currency": {
+          "anyOf": [
+            {
+              "enum": [
+                "CNY",
+                "USD",
+                "HKD",
+                "EUR",
+                "GBP",
+                "JPY",
+                "AUD",
+                "CAD",
+                "CHF",
+                "SGD",
+                "NZD",
+                "KRW",
+                "INR",
+                "TWD",
+                "MOP",
+                "MYR",
+                "IDR",
+                "THB",
+                "VND",
+                "PHP",
+                "AED",
+                "SAR",
+                "ZAR",
+                "BRL",
+                "MXN",
+                "RUB",
+                "SEK",
+                "NOK",
+                "DKK",
+                "PLN",
+                "TRY",
+                "ILS"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reporting Currency"
+        }
+      },
+      "required": [
+        "company_id",
+        "report_year",
+        "file_name"
+      ],
+      "title": "ReportInput",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "finance-research-input-v1",
+      "default": "finance-research-input-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "confirmed_by": {
+      "minLength": 1,
+      "pattern": ".*\\S.*",
+      "title": "Confirmed By",
+      "type": "string"
+    },
+    "companies": {
+      "items": {
+        "$ref": "#/$defs/Company"
+      },
+      "minItems": 1,
+      "title": "Companies",
+      "type": "array"
+    },
+    "reports": {
+      "items": {
+        "$ref": "#/$defs/ReportInput"
+      },
+      "minItems": 1,
+      "title": "Reports",
+      "type": "array"
+    }
+  },
+  "required": [
+    "confirmed_by",
+    "companies",
+    "reports"
+  ],
+  "title": "ResearchManifest",
+  "type": "object"
+}

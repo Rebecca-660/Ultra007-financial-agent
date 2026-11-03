@@ -1,0 +1,10 @@
+{
+  "metric_aliases": {
+    "Net sales": "revenue",
+    "Cost of goods sold": "cost_of_sales",
+    "Net cash provided by operating activities": "cfo"
+  },
+  "outflow_signs": {},
+  "statements": [],
+  "pages": []
+}
